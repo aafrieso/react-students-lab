@@ -1,5 +1,5 @@
 import './App.css';
-import StudentList from './StudentList';
+import Student from './Student'
 
 function App() {
   const students = [
@@ -63,9 +63,12 @@ function App() {
     }
   ]
   return (
-    <div className="App">
-      <StudentList students={students}/>
-    </div>
+    <>
+      <h1>React Students Lab</h1>
+      {students.map(student =>
+        <Student key={student.name} student ={student} />
+        )}
+    </>
   );
 }
 
